@@ -1,0 +1,10 @@
+the;DT; Singular
+a; DT; Singular
+people;NN; Plural
+person;NN; Singular
+dislike;VB; Singular
+dislikes;VBZ; Plural
+like;VB; Plural
+likes;VBZ; Singular
+green;JJ; Singular
+dog;NN; Singular
