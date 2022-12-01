@@ -56,7 +56,7 @@ class parser {
         while (line != null) {
             StringTokenizer st = new StringTokenizer(line);
             rule rule = new rule();
-            if ((line = st.nextToken())!=null){
+            if ((line = st.nextToken()) != null) {
                 rule.setRuleName(line);
                 List<Pos> pos = new ArrayList<Pos>();
                 while (st.hasMoreTokens()) {
@@ -69,15 +69,15 @@ class parser {
         }
     }
 
-    public void applyRule(String s){
+    public void applyRule(String s) {
         s = s.replaceAll("[^a-z A-Z]", "");
         StringTokenizer st = new StringTokenizer(s);
-        while (st.hasMoreTokens()){
+        while (st.hasMoreTokens()) {
             String rule = st.nextToken();
 
 
-                }
-            }
+        }
+    }
 
     public void sentences(String s) {
         s = s.replaceAll("[^a-z A-Z]", "");
@@ -95,15 +95,24 @@ class parser {
         }
 
         System.out.println("-------verb or noun phrase or adjective------");
-        if("DT".equals(dsentence.get(0))){
+        if ("DT".equals(dsentence.get(0))) {
             System.out.println("NP");
-        } else if("VB".equals(dsentence.get(0))){
+        } else if ("VB".equals(dsentence.get(0))) {
             System.out.println("VP");
-        }else if("VBZ".equals(dsentence.get(0))){
-            System.out.println("VP");}
-        else if("NN".equals(dsentence.get(0))){
-            System.out.println("NP");}
-        else if("JJ".equals(dsentence.get(0))){
-            System.out.println("ADJ");}
+        } else if ("VBZ".equals(dsentence.get(0))) {
+            System.out.println("VP");
+        } else if ("NN".equals(dsentence.get(0))) {
+            System.out.println("NP");
+        } else if ("JJ".equals(dsentence.get(0))) {
+            System.out.println("ADJ");
+        }
+
+        System.out.println("------Valid sentence-----");
+        if ("DT".equals(dsentence.get(0))) {
+            System.out.println("Accepted");
+        }
+        if ("VBZ".equals(dsentence.get(0))) {
+            System.out.println("Not Accepted");
+        }
     }
 }
